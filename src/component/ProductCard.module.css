@@ -1,0 +1,86 @@
+.card{
+    border:1px solid #ccc;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    padding:20px;
+    border-radius: 10px;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    gap:7px;
+    position: relative;
+}
+
+.image{
+    height: 200px;
+    width: 190px;
+    padding-bottom: 16px;
+}
+
+.title{
+    font-size: 18px;
+    margin: 0;
+    padding-bottom: 8px;
+    color: #000000;
+}
+
+.description{
+    font-size: 14px;
+    color:#24444e;
+    margin: 5px;
+}
+
+.price{
+    margin-top: 4px;
+    font-weight: 700;
+}
+
+.button{
+    border:none;
+    border-radius: 5px;
+    background: rgb(172, 190, 121);
+    color:white;
+    transition: background 0.15s ease;
+}
+
+/* استایل اضافه شده */
+
+.added{
+    background: rgb(113, 208, 113);
+    cursor: default;
+    color: white;
+    border: none;
+}
+
+
+.badge{
+    background: rgb(101, 222, 170);
+    border-radius: 20px 0px 25px 0px;
+    color:#ffffff;
+    font-size: 15px;
+    font-family: tahoma;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    padding:  15px 3px;
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.discount{
+    background:linear-gradient(135deg,#ff4d4d,#ff1a1a);
+    color:#fff;
+    border-radius: 20px;
+    padding: 4px 6px;
+    font-weight: bold;
+    position: absolute;
+    top:0px;
+    right: 0px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.btnDelete{
+    padding:5px;
+    width: 120px;
+    margin-left: auto;
+    background: rgba(0,0,0,0.059);
+}

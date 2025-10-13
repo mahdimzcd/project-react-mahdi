@@ -1,0 +1,134 @@
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  display: none; /* hidden by default */
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.modalCard {
+  background: linear-gradient(
+    180deg,
+    rgba(73, 153, 222, 0.82),
+    rgba(157, 223, 57, 0.543)
+  );
+  border-radius: 20px;
+  padding: 28px 24px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.7);
+  animation: scaleIn 0.35s cubic-bezier(0.2, 0.9, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  direction: rtl;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.formGroup > label{
+     color: rgb(144, 6, 6);
+     text-shadow: 1px 1px 2px rgb(233, 74, 74);
+     font-size: 1.1rem;
+}
+
+.formGroup > input {
+    border-radius: 10px;
+    outline: none;
+    padding: 10px 12px;
+    border: none;
+    background: rgba(255, 255, 255, 0.63);
+    color: #000000d1;
+    font-size: 0.9rem;
+    transition: border 0.8s , background 0.8s;
+}
+
+.formGroup > input:focus{
+    border: 1px solid blue;
+    background: rgba(255, 255, 255, 0.34);
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+  padding-bottom: 5px;
+}
+
+.btnPrimary {
+  background: rgba(255, 255, 255, 0.34);
+  padding: 10px 25px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration:none;
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.error-message {
+  color: #ffdd03; 
+  font-size: 0.8rem;
+  margin-top: 1px;
+  line-height: 1.2;
+  display: flex;
+  margin-left: auto;
+  animation: fadeIn 0.3s ease;
+}
+.error-message::before {
+  content: "⚠️";
+  font-size: 0.8rem;
+  display:inline-block;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.88) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.formGroup> .checkbox{
+/* transform: scale(1.5); */
+height: 17px;
+accent-color: rgb(85, 41, 219);
+}
+
+.closeModal{
+  padding: 7px 8px;
+  margin-left: auto;
+  background: rgb(7, 6, 6);
+  color: white;
+  display: flex;
+}
+
+.closeModal::before{
+  content:'❌' ;
+  font-size: 12px;
+  line-height: 1.4;
+  padding-left: 2px;
+}

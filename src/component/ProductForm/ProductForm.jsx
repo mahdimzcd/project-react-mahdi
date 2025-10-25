@@ -15,7 +15,7 @@ const validationSchema = Yup.object({
 });
 
 
-function ProductForm() {
+function ProductForm({onClick}) {
 
 
   const mutation = useMutation ({
@@ -49,7 +49,7 @@ function ProductForm() {
             <Form>
             <div className='modalOverlay'>
                 <div className='modalCard'>
-                  <button className='closeModal'  >  بستن  </button>
+                  <button className='closeModal' onClick={onClick}  >  بستن  </button>
                 <div className='formGroup'>
                   <label htmlFor='name'> نام محصول </label>
                   <Field autocomplete="off" type="text" name="name" id="name" placeholder="نام محصول را وارد کنید" />

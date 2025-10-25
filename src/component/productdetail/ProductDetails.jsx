@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import DUMMY_PRODUCTS from "../../data/ProductData";
-
+import { useSelector } from "react-redux";
 
 const Productdetail = () => {
 
@@ -19,9 +19,10 @@ const Productdetail = () => {
             </div>
         );
     }
+    const darkMode = useSelector((state) => state.theme.darkMode);
 
     return (
-        <div className="border rounded-[10px] flex items-start relative p-[60px] gap-[70px] shadow-[2px_6px_5px_rgba(0,0,0,0.2)]">
+        <div className={darkMode ? "bg-black border rounded-[10px] flex items-start relative p-[60px] gap-[70px] shadow-[2px_6px_5px_rgba(0,0,0,0.2)]" : "border rounded-[10px] flex items-start relative p-[60px] gap-[70px] shadow-[2px_6px_5px_rgba(0,0,0,0.2)]"}>
             <h1 className="block top-0 absolute text-[15px]" >ProductDetails:{id}</h1>
             
             <div className="max-w-64 relative">

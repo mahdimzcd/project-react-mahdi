@@ -11,9 +11,7 @@ import { useSelector } from "react-redux";
 
 const fetchProducts = async () => {
     const response = await axios.get('https://68da085190a75154f0dbaf13.mockapi.io/product');
-    // if (!response.ok) {
-    //     throw new Error('Network response was not ok');
-    // }
+   
     return response.data;
 };
 
@@ -67,6 +65,9 @@ const queryClient = useQueryClient();
     const openModal = () =>{
         setFormModal(true);
     }
+    const closeModal = () =>{
+        setFormModal(false);
+    }
     
 // const darkMode = useSelector((state) => state.theme.darkMode);
     
@@ -82,7 +83,7 @@ const queryClient = useQueryClient();
                  imageUrl={product.imageUrl}
                  isNew={product.isNew}  
                  discount={product.discount} />))}
-                 {formModal && <ProductForm/>}
+                 {formModal && <ProductForm onClick={closeModal} />}
         </div>
     );
 
